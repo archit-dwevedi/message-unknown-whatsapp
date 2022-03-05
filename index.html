@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Unknown Whatsapp</title>
+    
+</head>
+<body>
+    <input id="number" placeholder="Contact number" type="number"/>
+    <input id="message" placeholder="Message" type="text" />
+    <button type="button" onclick="javascript:openWhatsappAPI()">Message</button>
+    <script>
+        function openWhatsappAPI() {
+            const number = document.getElementById('number').value;
+            const message = document.getElementById('message').value;
+            window.open(`https://api.whatsapp.com/send?phone=${number}&text=${message}`, '_blank');
+        }
+    </script>
+</body>
+</html>
